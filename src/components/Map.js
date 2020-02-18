@@ -65,7 +65,7 @@ function Map() {
             }} 
             icon={{
               url: `/asteroid.svg`,
-              scaledSize: new window.google.maps.Size(Number(item.mass>1000000? 100 : item.mass/10000), Number(item.mass>1000000? 100 : item.mass/10000))
+              scaledSize: new window.google.maps.Size(Math.sqrt(Number(item.mass/1000)), Math.sqrt(Number(item.mass/1000)))
             }}
           />
         ))}
